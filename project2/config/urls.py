@@ -1,7 +1,7 @@
 """config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,13 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import post_detail, posts_list, create_post, post_delete, post_update
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('posts/', posts_list ),
-    path('post_create/', create_post),
-    path('post_detail/<int:p_id>/', post_detail),
-    path('post_delete/<int:p_id>/', post_delete),
-    path('post_update/<int:p_id>/', post_update)
-
 ]
